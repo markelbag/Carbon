@@ -4,3 +4,6 @@
   position: relative;
   top: $spacing-06; //margin-top doesn't work on table-cell, and padding-top looks weird on focus
 }
+.text {
+  background-color: red;
+}

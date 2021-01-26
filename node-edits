@@ -1,0 +1,11 @@
+Node_Modules -> Gatsby Theme Carbon -> SRC -> Templates -> Homepage.js
+Hide first and second Callouts
+
+Node_Modules -> Gatsby Theme Carbon -> SRC -> Components -> Header.js
+Hide GlobalHeaderBar lines 57-71
+
+Node_Modules -> Gatsby Theme Carbon -> SRC -> Components -> Homepages -> Banner.modules.scss
+changes text color to #ad5706
+
+ode_Modules -> Gatsby Theme Carbon -> SRC -> Components -> PageHeader -> PageHeader.modules.scss
+changed background color to c07229

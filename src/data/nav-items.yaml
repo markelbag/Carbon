@@ -1,15 +1,15 @@
 - title: About Us
   pages:
-    - path: /getting-started
+    - path: /about-us
 - title: Membership Options
   pages:
-    - path: /demo
+    - path: /membership
 - title: Schedule
   pages:
-    - path: /gallery
+    - path: /schedule
 - title: Contact Us
   pages:
-    - path: /contributions
+    - path: /contact-us
 - title: Guides
   pages:
     - title: Configuration
