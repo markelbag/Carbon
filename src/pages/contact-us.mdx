@@ -3,11 +3,43 @@ title: Contact Us
 description: Instructions for developing and contributing to the theme
 ---
 
-<PageDescription>
 
-Use this guide to contribute to the theme. We’ll show you how to get the
-development environment set up as quickly as possible so you can start
-contributing.
+import { Button, Form, TextInput, TextArea, SelectItem, Select } from 'carbon-components-react';
 
-</PageDescription>
-
+<Row>
+    <Column colMd={4} colLg={4}>
+  <Form>
+  <div style={{marginBottom: '2rem'}}>
+    <TextInput
+      helperText="Please enter your email address"
+      id="test2"
+      invalidText="Invalid error message."
+      labelText="E-mail"
+      placeholder="JohnSnow@GoT.com"
+    />
+  </div>
+  <div style={{marginBottom: '2rem'}}>
+  <TextArea
+    cols={50}
+    helperText="(~100 character count maximum)"
+    id="test5"
+    invalidText="Invalid error message."
+    labelText="Message"
+    placeholder="Say hello!"
+    rows={4}
+  />
+  </div>
+  <div style={{marginBottom: '2rem'}}>
+ 
+  </div>
+  <Button
+    kind="secondary"
+    tabIndex={0}
+    type="submit"
+  >
+    Submit
+  </Button>
+</Form>
+</Column>
+</Row>
+  

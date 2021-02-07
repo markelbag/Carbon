@@ -1,8 +1,74 @@
 // This is where your application styles could go.
 .column-bg {
-    background-color: #FFA500;
+    background-color: #5c461d;
 }
 
 .text-color {
-    color: #FFA500;
+    color: #828282;
+}
+
+.brown-text {
+    color: #20110A;
+}
+
+.yellow-text {
+    color: #FBA914;
+}
+
+.radius {
+    border-radius: 50%;
+}
+
+.top-pad {
+    padding-top: 80px;
+}
+
+.center {
+    text-align: center;
+}
+.roundedBtn {
+    border-radius: 25%;
+}
+.hide {
+    z-index: 0;
+}
+.head {
+    background-color: #FBA914;
+    position: absolute;
+    right: 0px;
+    width: 48px;
+    
+    z-index: 10000; /* old z('floating') #940 */
+  }
+
+
+// This is for the header menu bar links.
+  a.#{$prefix}--header__menu-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // Used for links that are directly in the menubar to span the full height
+    height: 100%;
+    padding: 0 mini-units(2);
+    color: #20110A;
+    font-weight: 400;
+    // Text styles
+    font-size: rem(14px);
+    line-height: 1.125rem;
+    letter-spacing: 0;
+    // Reset link styles and make sure the text isn't selectable
+    text-decoration: none;
+    // Used for focus styles
+    border: 2px solid transparent;
+    transition: background-color $duration--fast-02,
+      border-color $duration--fast-02, color $duration--fast-02;
+    user-select: none;
+  }
+//Footer background
+  [class*='footer'] {
+      background: #FBA914;
+  }
+
+.up {
+    margin-top: 0px;
 }

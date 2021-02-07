@@ -2,163 +2,196 @@
 title: Membership
 description: Demonstration of some of the theme components in action.
 ---
+import FreeTrial from "../../components/FreeTrial.js"
+import IntroToFencing from '../../components/IntroToFencing.js'
+import LevelOne from '../../components/Level1.js'
+import { loadStripe } from "@stripe/stripe-js"
+let stripePromise
+const getStripe = () => {
+  if (!stripePromise) {
+    stripePromise = loadStripe("pk_test_51HTFfqJIuG4AzTsAYJAAJgXTTTRhAjmtU2bPsuU9JXomRSvGWS4NfgXKtfm2nuvaUzA7OELlaRIHlFshO7N5qgfr005cRH6Vro")
+  }
+  return stripePromise
+}
 
-<PageDescription>
+<PageDescription className="yellow-text">
 
 #### In our classes we introduce you to footwork, bladework, and tactical aspects of this centuries old European martial art. You will learn how to concentrate on your breathing, to calm your mind, to master your emotions and push aside all other distractions, to attend to the most pertinent aspects of what is happening in the moment, to slow down time to see your options clearly, and to execute (or revise) your strategy most effectively.
 
 
 </PageDescription>
+ 
 <Row>
-<Column colMd={4} colLg={4} className="text-color ">
+<Column colMd={5} colLg={5} className="text-color">
+<Row>
 
-## Free Trial
+## **Free Trial**
+<FreeTrial />
+</Row>
 
-##### a basic introduction
+##### _a basic introduction_
 <Accordion>
-  <AccordionItem title="Schedule">
-      
-- Tuesday or Thursday
+<AccordionItem title="Schedule" open="true">
+Tuesday or Thursday
 
-- 5PM
-- 55-65 min
+5PM
 
-</AccordionItem>
-  <AccordionItem title="Fee">
-      
-- Free
+55-65 min
 
 </AccordionItem>
- <AccordionItem title="Whats Included">
+<AccordionItem title="Fee" open="true">
       
-- We supply all equipment!
+Free
 
 </AccordionItem>
-  <AccordionItem title="Whats Required">
+ <AccordionItem title="Whats Included" open="true">
       
-- Athletic pants(no shorts) and running shoes
+We supply all equipment!
+
+</AccordionItem>
+  <AccordionItem title="Whats Required" open="true">
+      
+Athletic pants(no shorts) and running shoes
 
 </AccordionItem>
 </Accordion>
 </Column>
 
-<Column colMd={4} colLg={4} className="text-color ">
+<Column colMd={5} colLg={5} className="text-color" open="true">
 
-## Intro to Fencing
+## **Intro to Fencing**
 
-##### a four week introduction
+##### _a four week introduction_
 <Accordion>
-  <AccordionItem title="Schedule">
+  <AccordionItem title="Schedule"open="true">
 
-- Tuesday or Thursday
+Tuesday or Thursday
 
-- 5PM
-- 55-65 min
+5PM
+
+55-65 min
 
 </AccordionItem>
-  <AccordionItem title="Fee">
+  <AccordionItem title="Fee" open="true">
+
+<Row>    
+    
+$100/mo for 1x a week
+ <IntroToFencing />
+</Row>
+
+</AccordionItem>
+  <AccordionItem title="Whats Included" open="true">
+
+Basic footwork and bladework
+
+Intro to basic tactics
+
+Beginner bouting
+
+Rental gear Included
+
+</AccordionItem>
+  <AccordionItem title="Whats Required" open="true">
       
-- $100/mo for 1x a week
+Athletic pants(no shorts) and running shoes
 
-</AccordionItem>
-  <AccordionItem title="Whats Included">
-
-- Basic footwork and bladework
-
-- Intro to basic tactics
-- Beginner bouting
-- Rental gear Included
-
-</AccordionItem>
-  <AccordionItem title="Whats Required">
-      
-- Athletic pants(no shorts) and running shoes
-
-- USFA non-competitve membership(Renewed yearly)
+USFA non-competitve membership(Renewed yearly)
 
 </AccordionItem>
 </Accordion>
 </Column>
 </Row>
 <Row>
-<Column colMd={4} colLg={4} className="text-color ">
+<Column colMd={5} colLg={5} className="text-color ">
+<Row>
 
-## Level I
+## **Level I**
+<LevelOne />
+</Row>
 
-##### refine technique and tactics
+##### _refine technique and tactics_
 <Accordion>
-  <AccordionItem title="Schedule">
+  <AccordionItem title="Schedule" open="true">
       
-- Tuesday or Thursday
+Tuesday or Thursday
 
-- 5PM
-- 55-65 min
+5PM
 
-</AccordionItem>
-  <AccordionItem title="Fee">
-
-- $90/mo for 1x a week
-
-- $145/mo for 2x a week
+55-65 min
 
 </AccordionItem>
-  <AccordionItem title="Whats Included">
+  <AccordionItem title="Fee" open="true">
 
-- Basic footwork and bladework refinement
+$90/mo for 1x a week
 
-- Basic fencing tactics
-- Coordination drills
-- Open bouts
+$145/mo for 2x a week
 
 </AccordionItem>
-  <AccordionItem title="Whats Required">
+  <AccordionItem title="Whats Included" open="true">
+
+Basic footwork and bladework refinement
+
+Basic fencing tactics
+
+Coordination drills
+
+Open bouts
+
+</AccordionItem>
+  <AccordionItem title="Whats Required" open="true">
       
-- Athletic pants(no shorts) and running shoes
+Athletic pants(no shorts) and running shoes
 
-- Rental gear or your own equipment
-- USFA non-competitve membership(Renewed yearly)
+Rental gear or your own equipment
+
+USFA non-competitve membership(Renewed yearly)
 
 </AccordionItem>
 </Accordion>
 </Column>
 
-<Column colMd={4} colLg={4} className="text-color ">
+<Column colMd={5} colLg={5} className="text-color " open="true">
 
-## Level II
-
-##### become competitve
+## **Level II**
+##### _become competitve_
 <Accordion>
-  <AccordionItem title="Schedule">
+  <AccordionItem title="Schedule" open="true">
       
-- Tuesday, Thursday and Saturday
+Tuesday, Thursday and Saturday
 
-- 6PM
-- 85-110 min class
+6PM
+
+85-110 min class
 
 </AccordionItem>
-  <AccordionItem title="Fee">
+  <AccordionItem title="Fee" open="true">
 
-- 135/mo for 1x a week
+135/mo for 1x a week
 
-- 205/mo for 2x a week
-- 235/mo for 3x a week
+205/mo for 2x a week
 
-</AccordionItem>
-  <AccordionItem title="Whats Included">
-      
-- Improve footwork and bladework
-
-- Intermediate tactics
-- Fencing strength and conditioning
-- Tempo and Technique drills
+235/mo for 3x a week
 
 </AccordionItem>
-  <AccordionItem title="Whats Required">
+  <AccordionItem title="Whats Included" open="true">
       
-- Athletic pants(no shorts) and running shoes
+Improve footwork and bladework
 
-- Rental gear or your own equipment
-- USFA non-competitve membership(Renewed yearly)
+Intermediate tactics
+
+Fencing strength and conditioning
+
+Tempo and Technique drills
+
+</AccordionItem>
+  <AccordionItem title="Whats Required" open="true">
+      
+Athletic pants(no shorts) and running shoes
+
+Rental gear or your own equipment
+
+USFA non-competitve membership(Renewed yearly)
 
 </AccordionItem>
 </Accordion>

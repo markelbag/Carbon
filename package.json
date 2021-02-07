@@ -12,7 +12,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.12.1",
     "gatsby": "^2.24.14",
+    "gatsby-source-stripe": "^3.2.1",
     "gatsby-theme-carbon": "^1.27.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"

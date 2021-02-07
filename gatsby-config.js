@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Theme Carbon",
-    description: "A Gatsby theme for the carbon design system",
-    keywords: "gatsby,theme,carbon",
+    title: "Allez Fencing Center",
+    description: "Allez Fencing Center for Olympic Fencing",
+    keywords: "Allez,fencing,epee,youth sports,kids activities",
   },
   plugins: [
     'gatsby-theme-carbon',
@@ -10,7 +10,12 @@ module.exports = {
       resolve: 'gatsby-theme-carbon',
       options: {
         navigationStyle: 'header',
-        isSearchEnabled: false,      
+        isSearchEnabled: false,
+        globalActionButton: false, 
+        theme: {
+          homepage: 'white',
+          interior: 'white',
+        },   
       },
     },
     {
@@ -25,6 +30,6 @@ module.exports = {
         display: "browser",
       },
     },
-
+  
   ],
 };
