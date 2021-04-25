@@ -1,0 +1,17 @@
+“Welcome! Are you interested signing up for classes for yourself or your child?”
+
+MYSELF —> “Are you an experienced fencer?” 
+NO —> “Great, you’re going to love learning about this exciting lifelong sport. We recommend Into to Fencing for Adults...(description). Would you be interested in trying a FREE trail class? 
+YES —> We offer Trial Classes at these times. Please select the one you’d like to attend. 
+TUESDAY, MARCH 9 —> Please provide Name, Address, Email, Phone 
+
+If YES to experienced —> ask them to describe their previous experience and let them know a member of the team will reach out to them with a class recommendation.
+
+If NO to trial class —> offer signing up for INTRO TO FENCING  
+
+CHILD —>  “Is your child an experienced fencer?“
+NO —> “Great, he/she/they will love learning about this strategic Olympic sport. Would you be interested in a FREE trial class?”
+YES —> We offer Trial Classes at these times. Please select the one you’d like to attend. 
+TUESDAY, MARCH 9 —> Please provide Child’s Name, Address, Email, Phone 
+“Do you have another child you’d like to sign up as well?”
+YES —> go through questions 

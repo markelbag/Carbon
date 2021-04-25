@@ -5,7 +5,9 @@ description: Demonstration of some of the theme components in action.
 import FreeTrial from "../../components/FreeTrial.js"
 import IntroToFencing from '../../components/IntroToFencing.js'
 import LevelOne from '../../components/Level1.js'
+import LevelTwo from '../../components/Level2.js'
 import { loadStripe } from "@stripe/stripe-js"
+import { RadioButton, RadioButtonGroup, FormGroup } from 'carbon-components-react';
 let stripePromise
 const getStripe = () => {
   if (!stripePromise) {
@@ -21,71 +23,64 @@ const getStripe = () => {
 
 </PageDescription>
  
-<Row>
-<Column colMd={5} colLg={5} className="text-color">
-<Row>
-<Column colSm={1} colMd={4} colLg={5}>
+
+
+<div style={{ width: '75%'}}>
+<Tabs >
+<Tab label="Free Trial" >
 
 ## **Free Trial**
-</Column>
-<Column colSm={1} colMd={4} colLg={5}>
-<FreeTrial />
-</Column>
-</Row>
-
 ##### _a basic introduction_
-<Accordion>
-<AccordionItem title="Schedule" open="true">
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
+
+#### **Schedule**
+
+
 Tuesday or Thursday
 
 5PM
 
 55-65 min
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-<AccordionItem title="Fee" open="true">
-      
-Free
+#### **Fee**
 
-</AccordionItem>
- <AccordionItem title="Whats Included" open="true">
-      
+Free Trial
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
+
+#### **Whats Included**
+
 We supply all equipment!
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Required" open="true">
-      
+#### **Whats Required**
+
 Athletic pants(no shorts) and running shoes
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-</Accordion>
-</Column>
-
-<Column colMd={5} colLg={5} className="text-color" open="true">
+</Tab>
+<Tab label="Intro to Fencing">
 
 ## **Intro to Fencing**
-
 ##### _a four week introduction_
-<Accordion>
-  <AccordionItem title="Schedule"open="true">
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
+
+#### **Schedule**
+
 
 Tuesday or Thursday
 
 5PM
 
 55-65 min
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Fee" open="true">
-
-<Row>    
+#### **Fee**
 
 $100/mo for 1x a week
- <IntroToFencing />
-</Row>
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Included" open="true">
+#### **Whats Included**
 
 Basic footwork and bladework
 
@@ -94,45 +89,41 @@ Intro to basic tactics
 Beginner bouting
 
 Rental gear Included
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Required" open="true">
-      
+#### **Whats Required**
+
 Athletic pants(no shorts) and running shoes
 
 USFA non-competitve membership(Renewed yearly)
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-</Accordion>
-</Column>
-</Row>
-<Row>
-<Column colMd={5} colLg={5} className="text-color ">
-<Row>
+
+</Tab>
+
+<Tab label="Level I">
 
 ## **Level I**
-<LevelOne />
-</Row>
-
 ##### _refine technique and tactics_
-<Accordion>
-  <AccordionItem title="Schedule" open="true">
-      
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
+
+#### **Schedule**
+
+
 Tuesday or Thursday
 
 5PM
 
 55-65 min
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Fee" open="true">
+#### **Fee**
 
 $90/mo for 1x a week
-
 $145/mo for 2x a week
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Included" open="true">
+#### **Whats Included**
 
 Basic footwork and bladework refinement
 
@@ -141,45 +132,45 @@ Basic fencing tactics
 Coordination drills
 
 Open bouts
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Required" open="true">
-      
+#### **Whats Required**
+
 Athletic pants(no shorts) and running shoes
 
 Rental gear or your own equipment
 
 USFA non-competitve membership(Renewed yearly)
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-</Accordion>
-</Column>
 
-<Column colMd={5} colLg={5} className="text-color " open="true">
+</Tab>
+
+<Tab label="Level II">
 
 ## **Level II**
-##### _become competitve_
-<Accordion>
-  <AccordionItem title="Schedule" open="true">
-      
+##### _become competitive_
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
+
+#### **Schedule**
+
+
 Tuesday, Thursday and Saturday
 
 6PM
 
 85-110 min class
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Fee" open="true">
+#### **Fee**
 
-135/mo for 1x a week
+$90/mo for 1x a week
+$145/mo for 2x a week
+$220/mo for 3x a week
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-205/mo for 2x a week
+#### **Whats Included**
 
-235/mo for 3x a week
-
-</AccordionItem>
-  <AccordionItem title="Whats Included" open="true">
-      
 Improve footwork and bladework
 
 Intermediate tactics
@@ -187,17 +178,22 @@ Intermediate tactics
 Fencing strength and conditioning
 
 Tempo and Technique drills
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-  <AccordionItem title="Whats Required" open="true">
-      
+#### **Whats Required**
+
 Athletic pants(no shorts) and running shoes
 
 Rental gear or your own equipment
 
 USFA non-competitve membership(Renewed yearly)
+<div style={{marginTop: "20px", width: "90%", height:"1px", backgroundColor: "#fba914" }} />
 
-</AccordionItem>
-</Accordion>
-</Column>
-</Row>
+
+
+</Tab>
+
+</Tabs>
+
+</div>
+

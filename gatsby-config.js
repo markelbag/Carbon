@@ -11,7 +11,6 @@ module.exports = {
       options: {
         navigationStyle: 'header',
         isSearchEnabled: false,
-        globalActionButton: false, 
         theme: {
           homepage: 'white',
           interior: 'white',
@@ -30,6 +29,6 @@ module.exports = {
         display: "browser",
       },
     },
-  
+
   ],
 };

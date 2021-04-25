@@ -1,21 +1,7 @@
 import React, { useState } from "react"
 import { loadStripe } from "@stripe/stripe-js"
-const buttonStyles = {
-  marginTop: "5rem",
-  height: "48px",
-  fontSize: "13px",
-  textAlign: "center",
-  color: "#20110A",
-  padding: "12px 60px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "#FBA914",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
-const buttonDisabledStyles = {
-  opacity: "0.5",
-  cursor: "not-allowed",
-}
+import { Button } from 'carbon-components-react'
+
 let stripePromise
 const getStripe = () => {
   if (!stripePromise) {
@@ -24,7 +10,7 @@ const getStripe = () => {
   return stripePromise
 }
 const FreeTrial = () => {
-  const [loading, setLoading] = useState(false)
+  const [setLoading] = useState(false)
   const redirectToCheckout = async event => {
     event.preventDefault()
     setLoading(true)
@@ -41,15 +27,14 @@ const FreeTrial = () => {
     }
   }
   return (
-    <button
-      disabled={loading}
-      style={
-        loading ? { ...buttonStyles, ...buttonDisabledStyles } : buttonStyles
-      }
+    <Button
+    className="btn"
+    kind="secondary"
+
       onClick={redirectToCheckout}
     >
       SIGN UP
-    </button>
+    </Button>
   )
 }
 export default FreeTrial;

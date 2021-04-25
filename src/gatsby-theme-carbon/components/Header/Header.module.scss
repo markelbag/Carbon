@@ -1,45 +1,92 @@
 @import '~carbon-components/scss/globals/scss/layout';
 
-.header button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header.header {
-  background-color: #FBA914;
-  z-index: 10000; /* old z('floating') #940 */
-}
-
 :global(.bx--header__global) {
+  background-color: #fba914;
+  color: #20110A;
   position: absolute;
   top: 0;
   right: 0;
   width: calc(100% - 3rem);
+  z-index: 1;
   @include carbon--breakpoint('lg') {
     position: static;
     width: auto;
   }
 }
 
+// When search is open, it will properly sit on top of the navigation links when using the headernav style of naviation.
+.searchIsOpenOnBar {
+  z-index: 2;
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav) {
+  @include carbon--breakpoint('lg') {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    z-index: 2;
+  }
+}
+
+// Aligns HeaderNav with 12 col grid
+.headerWithHeaderNav :global(.bx--header__menu-bar) {
+  margin-left: 5px;
+}
+
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__menu-item) {
+  
+  font-size: 1rem;
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
 .header :global(.bx--header__action--menu) {
   border: none;
   top: 0.5px;
   position: relative;
   flex-shrink: 0;
-  &:focus {
-    outline: 2px solid $carbon--white-0;
-    outline-offset: -2px;
-  }
   @include carbon--breakpoint('lg') {
     display: none;
   }
 }
 
+// Overrides upstream Carbon styles for header nav
+.headerWithHeaderNav :global(.bx--header__nav::before) {
+  display: none;
+}
+
+.headerNameWithHeaderNav {
+  @include carbon--breakpoint('lg') {
+    padding: 0 2rem;
+  }
+}
+
+// Overrides upstream Carbon styles for left nav in mobile.
+.header :global(.bx--header__action--menu):focus {
+  outline: 2px solid $carbon--white-0;
+  outline-offset: -2px;
+}
+
+.header button {
+  background-color: #fba914;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Extra specificity needed to override upstream styles.
+header.header {
+  background-color: #fba914;
+
+  z-index: 10000; /* old z('floating') #940 */
+}
+
 .header :global(.bx--header__action--menu.bx--header__action--active) {
-  
-    background-color: $carbon--gray-100;
-  border-right: 1px solid $inverse-02;
+  background-color: #FBA914;
+
   @include carbon--breakpoint('lg') {
     display: none;
   }
@@ -65,15 +112,16 @@ header.header {
 .headerName {
   @include carbon--type-style('body-short-02');
   transition: opacity $duration--fast-02 $carbon--standard-easing;
+  width: 20%;
   color: #20110A;
   text-decoration: none;
   left: 3rem;
   white-space: nowrap;
   padding: 0 $spacing-05;
   height: 3rem;
-  border-top: 1px solid transparent;
   display: flex;
   align-items: center;
+  z-index: 3;
   &:focus {
     outline: 2px solid $carbon--white-0;
     outline-offset: -2px;
@@ -81,9 +129,13 @@ header.header {
 
   @include carbon--breakpoint('lg') {
     left: 0;
-    width: calc(25% + 1rem);
     max-width: 384px;
   }
+}
+
+// When search is open this will allow the search bar to cover the header on mobile and tablet screens.
+.searchIsOpenOnLink {
+  z-index: 1;
 }
 
 .header .header-button {
@@ -94,20 +146,16 @@ header.header {
 // Switcher button, extra specificity to override Carbon styles
 // Hex values used pending shell theming
 .header .header-button.switcher-button {
-  background-color: $carbon--gray-100;
+  background-color: #fba914;
+  
   position: relative;
   border: none;
   border-color: $ui-05;
-  border-bottom: 1px solid $carbon--gray-80;
   &:focus {
-    outline: 2px solid $carbon--white-0;
+    outline: 2px solid ;
     outline-offset: -2px;
   }
-  &:hover {
-    background-color: $carbon--gray-80;
-  }
   &:active {
-    background-color: #3d3d3d;
     border-left: 1px solid $ui-05;
     border-right: 1px solid $ui-05;
   }
@@ -115,10 +163,12 @@ header.header {
 
 .header-button.switcher-button.switcher-button--open {
   border: 1px solid transparent;
-  border-left: 1px solid $carbon--gray-80;
-  border-bottom: 1px solid $carbon--gray-100;
-  background-color: $carbon--gray-100;
+  background-color: #fba914;
   &:active {
     border-left: 1px solid $carbon--white-0;
   }
+}
+
+.header :global(a.bx--header__menu-item:hover) {
+  color: $carbon--white-0;
 }

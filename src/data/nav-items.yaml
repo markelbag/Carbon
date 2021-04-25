@@ -7,3 +7,12 @@
 - title: Contact Us
   pages:
     - path: /contact-us
+- title: Account
+  pages:
+    - path: /account
+- title: Modal
+  pages: 
+    - path: /modal
+- title: Forms
+  pages:
+    - path: /forms
