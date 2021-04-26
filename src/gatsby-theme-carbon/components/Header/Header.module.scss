@@ -45,7 +45,7 @@
 // Overrides upstream Carbon styles for left nav in mobile.
 .header :global(.bx--header__action--menu) {
   border: none;
-  top: 0.5px;
+  
   position: relative;
   flex-shrink: 0;
   @include carbon--breakpoint('lg') {

@@ -3,12 +3,16 @@ import ResourceLinks from 'gatsby-theme-carbon/src/components/LeftNav/ResourceLi
 
 const links = [
   {
-    title: 'USFA',
-    href: 'https://www.usafencing.org',
+    title: 'Github',
+    href: 'https://github.com/carbon-design-system/gatsby-theme-carbon',
   },
   {
-    title: 'Ask FRED',
-    href: 'https://www.askfred.net',
+    title: 'Carbon',
+    href: 'https://www.carbondesignsystem.com',
+  },
+  {
+    title: 'Configuration guide',
+    href: '/guides/configuration',
   },
 ];
 
